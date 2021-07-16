@@ -35,15 +35,15 @@
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |  7   |  8   |   9  |    0  |       |
 // |       |     |     |      |      |      |                   |      |  4   |  5   |   6  |    +  |   *   |
-// |       |     |     |      |      |      |                   |      |  1   |  2   |   3  |    -  |   /   |
-// |       |     |     |      |      |      |        |  |       |      |      |  ,   |   .  |    =  | ENTER |
+// |       |     |     |      |      |      |                   |PW ON |  1   |  2   |   3  |    -  |   /   |
+// |       |     |     |      |      |      |        |  |       |PW OF |      |  ,   |   .  |    =  | ENTER |
 //               |     |      |      |      |        |  | PLAY  |PG DW |PG UP |BR DW |BR UP |
             bindings = <
 &trans    &trans    &trans    &trans      &trans    &trans                    &trans    &kp N7   &kp N8    &kp N9    &kp N0        &trans
 &trans    &trans    &trans    &trans      &trans    &trans                    &trans    &kp N4   &kp N5    &kp N6    &kp PLUS      &kp KP_MULTIPLY
-&trans    &trans    &trans    &trans      &trans    &trans                    &trans    &kp N1   &kp N2    &kp N3    &kp KP_MINUS  &kp KP_DIVIDE
-&trans    &trans    &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &kp COMMA    &kp KP_DOT &kp KP_EQUAL  &trans
-                    &trans    &trans      &trans    &trans    &trans   &kp K_PP &kp PG_DN    &kp PG_UP   &kp C_BRI_DN    &kp C_BRI_UP
+&trans    &trans    &trans    &trans      &trans    &trans                    &ext_power EP_ON    &kp N1   &kp N2    &kp N3    &kp KP_MINUS  &kp KP_DIVIDE
+&trans    &trans    &trans    &trans      &trans    &trans    &trans   &trans &ext_power EP_OFF    &trans   &kp COMMA    &kp KP_DOT &kp KP_EQUAL  &trans
+                    &trans    &trans      &trans    &trans    &trans   &kp C_PP &kp PG_DN    &kp PG_UP   &kp C_BRI_DN    &kp C_BRI_UP
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
