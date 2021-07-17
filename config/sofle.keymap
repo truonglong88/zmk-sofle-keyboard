@@ -21,7 +21,7 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  CMD+0 |  | MUTE  |  N   |  M    |  ,    |  .   |   /   | RS/EN |
 //               | GUI | ALT  |  {   |  }   |  ENTER |  | SPACE |  ^   |  <-   |  v    |  ->  |
             bindings = <
-&kp GRAVE        &kp N1   &kp N2   &kp N3    &kp N4    &kp N5                             &kp N6 &mt KP_MINUS N7    &mt PLUS N8    &mt UNDER N9   &mt KP_EQUAL N0   &kp BSPC
+&kp GRAVE        &kp N1   &kp N2   &kp N3    &kp N4    &kp N5                             &kp N6 &mt KP_MINUS N7    &mt KP_PLUS N8    &mt UNDER N9   &mt KP_EQUAL N0   &kp BSPC
 &kp ESC          &kp Q    &kp W    &kp E     &kp R     &kp T                              &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSLH
 &mt CAPS TAB     &kp A    &kp S    &kp D     &kp F     &kp G                              &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &kp LSHFT        &kp Z    &kp X    &kp C     &kp V     &kp B     &kp LG(N0)    &kp C_MUTE &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RET
@@ -36,14 +36,14 @@
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |  7   |  8   |   9  |    0  |       |
 // |       |     |     |      |      |      |                   |      |  4   |  5   |   6  |    +  |   *   |
-// |       |     |     |      |      |      |                   |PW ON |  1   |  2   |   3  |    -  |   /   |
-// |       |     |     |      |      |      |        |  |       |PW OF |      |  ,   |   .  |    =  | ENTER |
+// |       |     |     |      |      |PW ON |                   |PW ON |  1   |  2   |   3  |    -  |   /   |
+// |       |     |     |      |PW TO |PW OF |        |  |       |PW OF |PW TO |  ,   |   .  |    =  | ENTER |
 //               |     |      |      |      |        |  | PLAY  |PG DW |PG UP |BR DW |BR UP |
             bindings = <
 &trans    &trans    &trans    &trans      &trans    &trans                    &trans    &kp N7   &kp N8    &kp N9    &kp N0        &trans
 &trans    &trans    &trans    &trans      &trans    &trans                    &trans    &kp N4   &kp N5    &kp N6    &kp PLUS      &kp KP_MULTIPLY
-&trans    &trans    &trans    &trans      &trans    &trans                    &trans    &kp N1   &kp N2    &kp N3    &kp KP_MINUS  &kp KP_DIVIDE
-&trans    &trans    &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &kp COMMA    &kp KP_DOT &kp KP_EQUAL  &trans
+&trans    &trans    &trans    &trans      &trans    &ext_power EP_ON                    &ext_power EP_ON    &kp N1   &kp N2    &kp N3    &kp KP_MINUS  &kp KP_DIVIDE
+&trans    &trans    &trans    &trans      &ext_power EP_TOG    &ext_power EP_OFF    &trans   &trans &ext_power EP_OFF    &ext_power EP_TOG   &kp COMMA    &kp KP_DOT &kp KP_EQUAL  &trans
                     &trans    &trans      &trans    &trans    &trans   &kp C_PP &kp PG_DN    &kp PG_UP   &kp C_BRI_DN    &kp C_BRI_UP
             >;
         };
