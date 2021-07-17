@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-&left_encoder { resolution = <10>; };
+&left_encoder { resolution = <1>; };
 &right_encoder { resolution = <1>; };
 
 / {
@@ -31,7 +31,7 @@
                  &kp LGUI &kp LALT &kp LBKT  &kp RBKT            &kp RET       &kp SPACE  &kp UP &kp LEFT  &kp DOWN  &kp RIGHT
           >;
 
-           sensor-bindings = <&inc_dec_cp M N &inc_dec_cp E F>;
+           sensor-bindings = <&inc_dec_cp F12 F11 &inc_dec_cp E F &inc_dec_cp G H>;
         };
 
         lower_layer {
