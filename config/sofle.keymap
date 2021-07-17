@@ -31,7 +31,7 @@
                  &kp LGUI &kp LALT &kp LBKT  &kp RBKT            &kp RET       &kp SPACE  &kp UP &kp LEFT  &kp DOWN  &kp RIGHT
           >;
 
-           sensor-bindings = <&inc_dec_cp C_AC_ZOOM_IN C_AC_ZOOM_OUT &inc_dec_cp UP DOWN>;
+           sensor-bindings = <&inc_dec_cp M N &inc_dec_cp E F>;
         };
 
         lower_layer {
