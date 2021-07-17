@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 &left_encoder { resolution = <1>; };
-&right_encoder { resolution = <1>; };
+// &right_encoder { resolution = <1>; };
 
 / {
     keymap {
