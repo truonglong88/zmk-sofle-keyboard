@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-&right_encoder { resolution = <1>; status = "okay";};
 &left_encoder { resolution = <2>; };
+&right_encoder { resolution = <1>; status = "okay";};
 
 / {
     keymap {
