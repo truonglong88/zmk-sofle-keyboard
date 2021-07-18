@@ -27,11 +27,11 @@
 &lt 1 ESC        &kp N1   &kp N2   &kp N3    &kp N4    &kp N5                             &kp N6 &mt KP_MINUS N7    &mt KP_PLUS N8    &mt UNDER N9   &mt KP_EQUAL N0   &kp BSPC
 &kp TAB          &kp Q    &kp W    &kp E     &kp R     &kp T                              &kp Y  &kp U     &kp I     &kp O    &kp P    &lt 1 BSLH
 &kp CAPS         &kp A    &kp S    &kp D     &kp F     &kp G                              &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&kp LSHFT        &kp Z    &kp X    &kp C     &kp V     &kp B     &kp LG(N0)    &kp C_MUTE &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RET
+&kp LSHFT        &kp Z    &kp X    &kp C     &kp V     &kp B     &kp C_MUTE    &kp LG(N0) &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RET
                  &kp LGUI &kp LALT &kp LBKT  &kp RBKT            &kp RET       &kp SPACE  &kp UP &kp LEFT  &kp DOWN  &kp RIGHT
           >;
 
-           sensor-bindings = <&inc_dec_cp C_VOL_UP C_VOL_DN &inc_dec_cp PLUS KP_MINUS>;
+           sensor-bindings = <&inc_dec_cp C_VOL_UP C_VOL_UP &inc_dec_cp PLUS KP_MINUS>;
         };
 
         lower_layer {
@@ -44,13 +44,13 @@
 //               |     |      |      |      |        |  | PLAY  |BR DW | PREV |BR DW | NEXT |
             bindings = <
 &trans    &trans    &trans    &trans      &trans    &trans                    &none    &kp N7   &kp N8    &kp N9    &kp N0        &kp KP_EQUAL
-&trans    &trans    &trans    &trans      &trans    &trans                    &ext_power EP_ON    &kp N4   &kp N5    &kp N6    &kp PLUS      &kp KP_MINUS
-&trans    &trans    &trans    &trans      &trans    &ext_power EP_ON          &ext_power EP_OFF    &kp N1   &kp N2    &kp N3    &kp KP_MULTIPLY  &kp PRCNT
-&trans    &trans    &trans    &trans      &ext_power EP_TOG    &ext_power EP_OFF        &trans   &trans &ext_power EP_TOG    &kp GRAVE   &kp COMMA    &kp KP_DOT  &kp KP_DIVIDE &trans
+&trans    &trans    &trans    &trans      &trans    &trans                    &none    &kp N4   &kp N5    &kp N6    &kp PLUS      &kp KP_MINUS
+&trans    &trans    &trans    &trans      &trans    &ext_power EP_ON          &ext_power EP_ON    &kp N1   &kp N2    &kp N3    &kp KP_MULTIPLY  &kp PRCNT
+&trans    &trans    &trans    &trans      &trans    &ext_power EP_OFF  &trans   &trans &ext_power EP_OFF    &kp GRAVE   &kp COMMA    &kp KP_DOT  &kp KP_DIVIDE &trans
                     &trans    &trans      &trans    &trans    &trans   &kp C_PP &kp C_BRI_UP    &kp C_PREV   &kp C_BRI_DN    &kp C_NEXT
             >;
             
-            sensor-bindings = <&inc_dec_cp COMMA DOT &inc_dec_cp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_DN &inc_dec_cp PG_UP PG_DN>;
         };
     };
 };
