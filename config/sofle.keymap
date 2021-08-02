@@ -18,17 +18,17 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | 1/ESC |  2  |  3  |  4   |  5   |  6   |                   |  7   |  8    |  9    |   0  |   -   | BKSPC |
-// | TAB   |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |   O  |   P   |   +   |
-// |CAPS/~1|  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |   L  |   ;   |   '   |
+// | ESC/~1|  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |   9  |   0   | BKSPC |
+// | TAB   |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |   O  |   P   |   -   |
+// | CAPS  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |   L  |   ;   |   +   |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  CMD+0 |  | MUTE  |  N   |  M    |  ,    |  .   |   /   | RS/EN |
-//               | GUI |  {   |  }   |  |   |  ENTER |  | SPACE |  <-  |  ^    |  v    |  ->  |
+//               | GUI |  {   |  }   |  '   |  ENTER |  | SPACE |  <-  |  ^    |  v    |  ->  |
             bindings = <
-&mt ESC N1   &kp N2   &kp N3   &kp N4    &kp N5    &kp N6                             &kp N7 &kp N8    &kp N9    &kp N0   &kp MINUS   &kp BSPC
-&lt 1 TAB    &kp Q    &kp W    &kp E     &kp R     &kp T                              &kp Y  &kp U     &kp I     &kp O    &kp P       &kp EQUAL
-&kp CAPS     &kp A    &kp S    &kp D     &kp F     &kp G                              &kp H  &kp J     &kp K     &kp L    &kp SEMI    &kp SQT
+&lt 1 ESC    &kp N1   &kp N2   &kp N3    &kp N4    &kp N5                             &kp N6 &kp N7    &kp N8    &kp N9   &kp N0      &kp BSPC
+&kp TAB      &kp Q    &kp W    &kp E     &kp R     &kp T                              &kp Y  &kp U     &kp I     &kp O    &kp P       &kp MINUS
+&kp CAPS     &kp A    &kp S    &kp D     &kp F     &kp G                              &kp H  &kp J     &kp K     &kp L    &kp SEMI    &kp EQUAL
 &kp LSHFT    &kp Z    &kp X    &kp C     &kp V     &kp B     &kp C_MUTE    &kp LG(N0) &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH    &mt RSHFT RET
-                      &kp LGUI &kp LBKT  &kp RBKT  &kp BSLH  &kp RET       &kp SPACE  &kp LEFT &kp UP  &kp DOWN  &kp RIGHT
+                      &kp LGUI &kp LBKT  &kp RBKT  &kp SQT   &kp RET       &kp SPACE  &kp LEFT &kp UP  &kp DOWN  &kp RIGHT
           >;
 
            sensor-bindings = <&inc_dec_cp C_VOL_UP C_VOL_UP &inc_dec_cp C_VOL_UP C_VOL_DN>;
@@ -37,15 +37,15 @@
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
-// |   1   |  2  |  3  |  4   |  5   |  6   |                   |   7  |  8   |   9  |   0  |    -  |   =   |
-// |       |     |     |      |      |      |                   |   4  |  5   |   6  |      |    *  |   +   |
-// |       |     |     |      |      |      |                   |   1  |  2   |   3  |      |    !  |   %   |
+// |       |  1  |  2  |  3   |  4   |  5   |                   |   6  |  7   |  8   |   9  |    0  |   =   |
+// |       |     |     |      |      |      |                   |      |  4   |  5   |   6  |    *  |   -   |
+// |       |     |     |      |      |      |                   |      |  1   |  2   |   3  |    |  |   +   |
 // |       |     |     |      |      |      |        |  |       |   ~  |  `   |  ,   |   .  |    /  | ENTER |
 //               |     |      |      |      |        |  | PLAY  |PREV  | CMD+ | CMD- | NEXT |
             bindings = <
-&kp N1    &kp N2    &kp N3    &kp N4      &kp N5    &kp N6                      &kp N7       &kp N8       &kp N9        &kp N0       &kp KP_MINUS     &kp KP_EQUAL
-&trans    &trans    &trans    &trans      &trans    &trans                      &kp N4       &kp N5       &kp N6        &none        &kp KP_MULTIPLY  &kp PLUS
-&trans    &trans    &trans    &trans      &trans    &trans                      &kp N1       &kp N2       &kp N3        &none        &kp EXCL         &kp PRCNT
+&trans    &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                      &kp N6       &kp N7       &kp N8        &kp N9       &kp N0           &kp KP_EQUAL
+&trans    &trans    &trans    &trans      &trans    &trans                      &none        &kp N4       &kp N5        &kp N6       &kp KP_MULTIPLY  &kp KP_MINUS
+&trans    &trans    &trans    &trans      &trans    &trans                      &none        &kp N1       &kp N2        &kp N3       &kp PIPE         &kp PLUS
 &trans    &trans    &trans    &trans      &trans    &trans    &trans   &trans   &kp TILDE    &kp GRAVE    &kp COMMA     &kp KP_DOT   &kp KP_DIVIDE    &kp RET
                     &trans    &trans      &trans    &trans    &trans   &kp C_PP &kp C_PREV   &kp LG(PLUS) &kp LG(KP_MINUS) &kp C_NEXT
             >;
