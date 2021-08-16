@@ -20,7 +20,7 @@
 // | ESC/~1|  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |   9  |   0   | BKSPC |
 // | TAB   |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |   O  |   P   |   -   |
 // | CAPS  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |   L  |   ;   |   +   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  CMD+0 |  | MUTE  |  N   |  M    |  ,    |  .   |   /   | RS/EN |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  | CMD+0 |  N   |  M    |  ,    |  .   |   /   | RS/EN |
 //               | GUI |  {   |  }   |  '   |  ENTER |  | SPACE |  <-  |  ^    |  v    |  ->  |
             bindings = <
 &lt 1 ESC    &kp N1   &kp N2   &kp N3    &kp N4    &kp N5                             &kp N6 &kp N7    &kp N8    &kp N9   &kp N0      &kp BSPC
@@ -39,13 +39,13 @@
 // |       |  1  |  2  |  3   |  4   |  5   |                   |   6  |  7   |  8   |   9  |    0  |   =   |
 // |       |     |     |      |      |      |                   |      |  4   |  5   |   6  |    *  |   -   |
 // |       |     |     |      |      |      |                   |      |  1   |  2   |   3  |    |  |   +   |
-// |       |     |     |      |      |      |        |  |       |   ~  |  `   |  ,   |   .  |    /  | ENTER |
+// |       |     |     |      |      |      |        |  |BT CLR |   ~  |  `   |  ,   |   .  |    /  | ENTER |
 //               |     |      |      |      |        |  | PLAY  |PREV  | CMD+ | CMD- | NEXT |
             bindings = <
 &trans    &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                      &kp N6       &kp N7       &kp N8        &kp N9       &kp N0           &kp KP_EQUAL
 &trans    &trans    &trans    &trans      &trans    &trans                      &none        &kp N4       &kp N5        &kp N6       &kp KP_MULTIPLY  &kp KP_MINUS
 &trans    &trans    &trans    &trans      &trans    &trans                      &none        &kp N1       &kp N2        &kp N3       &kp PIPE         &kp PLUS
-&trans    &trans    &trans    &trans      &trans    &trans    &trans   &trans   &kp TILDE    &kp GRAVE    &kp COMMA     &kp KP_DOT   &kp KP_DIVIDE    &kp RET
+&trans    &trans    &trans    &trans      &trans    &trans    &trans   &bt BT_CLR   &kp TILDE    &kp GRAVE    &kp COMMA     &kp KP_DOT   &kp KP_DIVIDE    &kp RET
                     &trans    &trans      &trans    &trans    &trans   &kp C_PP &kp C_PREV   &kp LG(PLUS) &kp LG(KP_MINUS) &kp C_NEXT
             >;
             
