@@ -23,7 +23,7 @@
                       &kp LGUI &kp LBKT  &kp RBKT  &kp SQT   &kp RET           &kp SPACE  &kp LEFT &kp UP  &kp DOWN  &kp RIGHT
           >;
 
-           sensor-bindings = <&inc_dec_cp C_VOL_UP C_VOL_DN &inc_dec_cp C_VOL_UP C_VOL_DN>;
+           sensor-bindings = <&inc_dec_cp C_VOL_UP C_VOL_UP &inc_dec_cp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
